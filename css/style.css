@@ -1,0 +1,107 @@
+:root {
+      --bg-light: #fff7f0;
+      --text-light: #333;
+      --btn1: #d88c63;
+      --btn2: #f5b963;
+      --btn3: #e88786;
+      --bg-dark: #1e1e24;
+      --text-dark: #f5f5f5;
+      --btn-dark1: #d88c63;
+      --btn-dark2: #e3a163;
+      --btn-dark3: #c97373;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      padding: 2rem;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .group-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .edit-btn {
+      margin-top: 1rem;
+      background: #888;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #feedbackPage {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stars span {
+      font-size: 2rem;
+      cursor: pointer;
+      color: #ccc;
+    }
+
+    .stars span.selected {
+      color: gold;
+    }
+
+    textarea {
+      width: 90%;
+      height: 100px;
+      margin: 1rem 0;
+      font-family: monospace;
+      font-size: 0.9rem;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }

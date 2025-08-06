@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Tab Launcher</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+<div class="container" id="mainPage">
+<h1 style="display:flex;align-items:center;justify-content:center;gap:1rem;"><span id="helpIcon" style="cursor:pointer;">📂</span> Tab Launcher <button class="edit-btn" onclick="addTab()" style="background:transparent;border:1px solid #ccc;color:#444;border-radius:6px;font-size:1.2rem;padding:6px 12px;">+</button><button class="edit-btn" onclick="resetPositions()" style="background:transparent;border:none;color:inherit;font-size:1.5rem;cursor:pointer;">🔄</button></h1>
+<div style="display:flex;flex-direction:column;align-items:center;gap:1rem;"><div class="group-buttons" id="buttonContainer"></div></div>
+
+<button class="edit-btn" onclick="showFeedback()" style="position:fixed;bottom:1rem;right:1rem;background:transparent;color:#aaa;font-size:0.9rem;border:none;cursor:pointer;">Feedback</button>
+</div>
+<div class="container" id="feedbackPage">
+<h2>⭐ Rate This Tool</h2>
+<div class="stars" id="stars">
+<span onclick="setRating(1)">★</span>
+<span onclick="setRating(2)">★</span>
+<span onclick="setRating(3)">★</span>
+<span onclick="setRating(4)">★</span>
+<span onclick="setRating(5)">★</span>
+</div>
+<textarea placeholder="Optional feedback..."></textarea>
+<button id="submitFeedbackBtn" onclick="submitFeedback()" style="background:#007bff;color:white;">Submit</button>
+<div id="thankYou" style="display:none; font-size:2rem;">🎉 Thanks for your feedback!</div>
+<button id="backBtn" class="edit-btn" onclick="backToMain()" style="display:none;background:#ddd;color:#333;">🔙 Back</button>
+</div>
+
+<!-- GoatCounter script -->
+<script data-goatcounter="https://8flabs.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
